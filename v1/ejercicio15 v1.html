@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+    <head>
+        <meta http-equiv="content-Type" content = "text/html; charset=utf-8"/>
+        <title>Informacion sobre el productor</title>
+    </head>
+        <body>
+            <h3>informacion sobre el producto</h3>
+            <form action="/php/insertar..subasta.php" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Datos basicos</legend>
+                    <label for="nombre">Nombre</label><br/>
+                    <input type="text" name="Nombre" id="nombre" size="50" maxlength="250"/>
+                    <br/><br/>
+                    <label for="descripcion">Descripcion</label><br/>
+                    <textarea name="description" id="description" cols="40" rows="5"></textarea>
+                    <br/><br/>
+                    foto<input type="file" name="foto"/>
+                    <br/><br/>
+                    <input name="contador" type="checkbox" value="si"/>Añadir contador de vistas
+                </fieldset>
+                <fieldset>
+                    <legend>Datos economicos</legend>
+                    <label for="impuestos">Impuestos</label>
+                    <input type="text" size="5" id="precio" name="precio"/>&euro;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="impuestos">Impuestos</label>
+                    <select id="impuestos" name="impuestos">
+                        <option value="4">4%</option>
+                        <option value="7">7%</option>
+                        <option value="16">16%</option>
+                        <option value="25">25%</option>
+                    </select>
+                    <br/><br/>
+                    <label>Promocion</label><br/>
+                    <input type="radio" name="promocion" value="ninguno" checked="checked"/>ninguno<br/>
+                    <input type="radio" name="promocion" value="portes"/>transporte gratuio<br/>
+                    <input type="radio" name="promocion" value="descuento"/>descuento 5%
+                </fieldset>
+            </form>
+        </body>
+</html>
